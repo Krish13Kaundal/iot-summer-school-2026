@@ -1,0 +1,24 @@
+=== SENSOR LOG ===
+Time     : 5000 ms
+Temp     : 28.5 C | Humidity: 65%
+Light    : 73% (Bright)
+Distance : 42 cm
+==================
+=== SENSOR LOG ===
+Time     : 10000 ms
+Temp     : 28.6 C | Humidity: 64%
+Light    : 72% (Bright)
+Distance : 41 cm
+==================
+=== SENSOR LOG ===
+Time     : 15000 ms
+Temp     : 28.5 C | Humidity: 65%
+Light    : 70% (Normal)
+Distance : 45 cm
+==================
+=== SENSOR LOG ===
+Time     : 20000 ms
+Temp     : 28.4 C | Humidity: 66%
+Light    : 68% (Normal)
+Distance : 42 cm
+==================
