@@ -1,6 +1,6 @@
 #include "DHT.h"
 #define DHTPIN 2
-#define DHTTYPE DHT11
+#define DHTTYPE DHT22 // Changed to DHT22
 
 const int TRIG_PIN = 9;
 const int ECHO_PIN = 10;
@@ -21,21 +21,24 @@ void loop() {
   float h = dht.readHumidity();
   float t = dht.readTemperature();
 
-  // LDR Conversion
+  if (isnan(h) || isnan(t)) return;
+
+  // LDR Conversion to percentage
   int ldrRaw = analogRead(LDR_PIN);
   int lightPct = map(ldrRaw, 0, 1023, 0, 100);
   String lightDesc = (lightPct > 70) ? "Bright" : (lightPct > 30) ? "Normal" : "Dark";
 
-  // Ultrasonic distance
+  // HC-SR04 Distance calculation
   digitalWrite(TRIG_PIN, LOW); delayMicroseconds(2);
   digitalWrite(TRIG_PIN, HIGH); delayMicroseconds(10);
   digitalWrite(TRIG_PIN, LOW);
   long duration = pulseIn(ECHO_PIN, HIGH);
   int distance = (duration * 0.034) / 2;
 
+  // Structured Logging Format
   Serial.println("=== SENSOR LOG ===");
   Serial.print("Time     : "); Serial.print(millis()); Serial.println(" ms");
-  Serial.print("Temp     : "); Serial.print(t, 1); Serial.print(" C | Humidity: "); Serial.print(h, 0); Serial.println("%");
+  Serial.print("Temp     : "); Serial.print(t, 1); Serial.print(" C | Humidity: "); Serial.print(h, 1); Serial.println("%");
   Serial.print("Light    : "); Serial.print(lightPct); Serial.print("% ("); Serial.print(lightDesc); Serial.println(")");
   Serial.print("Distance : "); Serial.print(distance); Serial.println(" cm");
   Serial.println("==================");
