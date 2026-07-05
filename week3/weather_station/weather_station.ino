@@ -1,7 +1,7 @@
 #include "DHT.h"
 
-#define DHTPIN 2     // Pin connected to DHT11
-#define DHTTYPE DHT11
+#define DHTPIN 2     // Pin connected to DHT22
+#define DHTTYPE DHT22 // Changed to DHT22
 
 const int RED_LED = 4;
 const int GREEN_LED = 5;
@@ -31,11 +31,11 @@ void loop() {
 
   // Print in CSV format
   Serial.print(millis()); Serial.print(",");
-  Serial.print(t); Serial.print(",");
-  Serial.print(f); Serial.print(",");
-  Serial.println(h);
+  Serial.print(t, 1); Serial.print(",");
+  Serial.print(f, 1); Serial.print(",");
+  Serial.println(h, 1);
 
-  // Trigger conditions
+  // Trigger conditions (> 35°C or > 80% humidity)
   if (t > 35.0 || h > 80.0) {
     digitalWrite(RED_LED, HIGH);
     digitalWrite(GREEN_LED, LOW);
