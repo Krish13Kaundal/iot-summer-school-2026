@@ -1,0 +1,19 @@
+name: Arduino Lint & Count
+
+on: [push]
+
+jobs:
+  count-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run Python script to count .ino files
+        run: |
+          python3 -c "
+          import os
+          ino_files = [f for root, dirs, files in os.walk('.') for f in files if f.endswith('.ino') or f.endswith('.ino1')]
+          print(f'Total Arduino files found: {len(ino_files)}')
+          for f in ino_files: print(f'- {f}')
+          "
