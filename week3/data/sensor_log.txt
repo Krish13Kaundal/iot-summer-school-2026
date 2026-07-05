@@ -1,24 +1,18 @@
 === SENSOR LOG ===
-Time     : 5000 ms
-Temp     : 28.5 C | Humidity: 65%
-Light    : 73% (Bright)
-Distance : 42 cm
+Time     : 5026 ms
+Temp     : 24.0 C | Humidity: 40.0%
+Light    : 24% (Dark)
+Distance : 397 cm
 ==================
 === SENSOR LOG ===
-Time     : 10000 ms
-Temp     : 28.6 C | Humidity: 64%
-Light    : 72% (Bright)
-Distance : 41 cm
+Time     : 10132 ms
+Temp     : 24.0 C | Humidity: 40.0%
+Light    : 24% (Dark)
+Distance : 397 cm
 ==================
 === SENSOR LOG ===
-Time     : 15000 ms
-Temp     : 28.5 C | Humidity: 65%
-Light    : 70% (Normal)
-Distance : 45 cm
-==================
-=== SENSOR LOG ===
-Time     : 20000 ms
-Temp     : 28.4 C | Humidity: 66%
-Light    : 68% (Normal)
-Distance : 42 cm
+Time     : 15239 ms
+Temp     : 24.0 C | Humidity: 40.0%
+Light    : 24% (Dark)
+Distance : 397 cm
 ==================
