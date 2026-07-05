@@ -1,3 +1,8 @@
+/*
+ * Author: Krish
+ * Date: July 2026
+ * Description: LED blink program with serial monitoring and potentiometer control.
+ */
 int blinkCount = 0;
 int potPin = A0;
 
