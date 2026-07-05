@@ -25,4 +25,3 @@ The LED on Pin 13 will blink. Rotating the potentiometer knob will modify the re
 1. **Board not detected:** Check the USB cable connection and verify if the correct COM port is selected in Arduino IDE.
 2. **Serial Monitor showing garbage values:** Ensure that the Serial Monitor baud rate matches `9600`.
 3. **LED not blinking:** Double-check the polarity of the external LED (longer leg goes to Pin 13).
-4.
